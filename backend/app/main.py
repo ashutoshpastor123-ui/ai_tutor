@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.api.interview import router as interview_router
+from app.api.interview import router as interview_router
 
 app = FastAPI(title="AI Interview Tutor")
 
