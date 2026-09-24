@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Report</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page-report">
+
+    <div class="bg-grid"></div>
+
+    <main class="shell shell-wide">
+
+        <header class="topbar">
+            <div class="brand small">
+                <div class="brand-mark">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                </div>
+                <strong>AI Interview Tutor</strong>
+            </div>
+            <div class="session-meta">
+                <span id="reportRole" class="chip"><i class="fa-solid fa-briefcase"></i> —</span>
+                <span id="reportDifficulty" class="chip"><i class="fa-solid fa-gauge-high"></i> —</span>
+            </div>
+        </header>
+
+        <section class="report-hero card" data-testid="report-hero">
+            <div class="hero-left">
+                <span class="eyebrow">Your report</span>
+                <h1 id="reportHeadline">Interview complete</h1>
+                <p id="reportRecommendation" data-testid="report-recommendation">Loading recommendation…</p>
+                <div class="hero-actions">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="goHome()"
+                        data-testid="start-new-btn"
+                    >
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Start new interview</span>
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-ghost"
+                        onclick="window.print()"
+                        data-testid="print-btn"
+                    >
+                        <i class="fa-solid fa-print"></i>
+                        <span>Print / Save PDF</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="ring big" data-testid="overall-ring">
+                    <svg viewBox="0 0 120 120" class="ring-svg">
+                        <circle cx="60" cy="60" r="52" class="ring-track"/>
+                        <circle
+                            cx="60" cy="60" r="52"
+                            id="overallRingCircle"
+                            class="ring-progress"
+                            style="stroke-dashoffset: 326.72;"
+                        />
+                    </svg>
+                    <div class="ring-center">
+                        <strong id="overallScore" data-testid="overall-score">–</strong>
+                        <span>/ 10</span>
+                    </div>
+                </div>
+                <span class="ring-caption">Overall score</span>
+            </div>
+        </section>
+
+        <section class="scores-grid" data-testid="scores-grid">
+            <!-- score rings injected via JS -->
+        </section>
+
+        <section class="two-col">
+            <div class="card panel">
+                <div class="panel-head strengths-head">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Strengths</h3>
+                </div>
+                <ul id="strengthsList" class="bullet-list" data-testid="strengths-list"></ul>
+            </div>
+
+            <div class="card panel">
+                <div class="panel-head weaknesses-head">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h3>Weaknesses</h3>
+                </div>
+                <ul id="weaknessesList" class="bullet-list" data-testid="weaknesses-list"></ul>
+            </div>
+        </section>
+
+        <section class="card panel">
+            <div class="panel-head improve-head">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <h3>Areas to improve</h3>
+            </div>
+            <ul id="improveList" class="bullet-list" data-testid="improve-list"></ul>
+        </section>
+
+        <section class="card panel">
+            <div class="panel-head qf-head">
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Per-question feedback</h3>
+            </div>
+            <div id="questionFeedback" class="qf-wrap" data-testid="question-feedback"></div>
+        </section>
+
+        <footer class="foot">Keep practicing. Every attempt is a step forward.</footer>
+
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>

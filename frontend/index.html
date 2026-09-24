@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Interview Tutor — Start</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page-start">
+
+    <div class="bg-grid"></div>
+
+    <main class="shell">
+
+        <header class="brand">
+            <div class="brand-mark">
+                <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <div class="brand-text">
+                <strong>AI Interview Tutor</strong>
+                <span>Practice. Get feedback. Get better.</span>
+            </div>
+        </header>
+
+        <section class="card card-elevated">
+
+            <div class="card-head">
+                <h1 data-testid="start-title">Start a new mock interview</h1>
+                <p>Set the role, your experience, and how tough you want it.</p>
+            </div>
+
+            <form id="interviewForm" class="form" novalidate>
+
+                <div class="field">
+                    <label for="role">Target role</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <input
+                            type="text"
+                            id="role"
+                            name="role"
+                            placeholder="e.g. Python Backend Developer"
+                            autocomplete="off"
+                            required
+                            data-testid="input-role"
+                        />
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="experience">Experience</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-user-clock"></i>
+                            <select id="experience" data-testid="select-experience">
+                                <option>Fresher</option>
+                                <option>1 Year</option>
+                                <option>2 Years</option>
+                                <option>3+ Years</option>
+                                <option>5+ Years</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="difficulty">Difficulty</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <select id="difficulty" data-testid="select-difficulty">
+                                <option>Easy</option>
+                                <option selected>Medium</option>
+                                <option>Hard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="startBtn"
+                    data-testid="start-interview-btn"
+                >
+                    <span class="btn-label">Start Interview</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p id="errorBox" class="error-box" data-testid="start-error" hidden></p>
+
+            </form>
+        </section>
+
+        <section class="tips">
+            <div class="tip">
+                <i class="fa-solid fa-video"></i>
+                <div>
+                    <strong>Camera on</strong>
+                    <span>We turn on your camera to simulate a real interview.</span>
+                </div>
+            </div>
+            <div class="tip">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div>
+                    <strong>AI questions</strong>
+                    <span>Each question adapts to your last answer.</span>
+                </div>
+            </div>
+            <div class="tip">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                    <strong>Detailed report</strong>
+                    <span>Scores, strengths, weaknesses, and next steps.</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="foot">Made for candidates who like to prepare well.</footer>
+
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

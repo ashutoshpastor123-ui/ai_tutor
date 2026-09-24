@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+opencv-python
+mediapipe
+pydantic
+jinja2
+python-multipart
