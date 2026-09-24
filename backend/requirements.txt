@@ -7,3 +7,4 @@ mediapipe
 pydantic
 jinja2
 python-multipart
+groq
