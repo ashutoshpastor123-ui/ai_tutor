@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 import uuid
 
-from backend.app.models.schemas import (
+from app.models.schemas import (
     InterviewRequest,
     InterviewResponse,
     AnswerRequest,
@@ -10,8 +10,8 @@ from backend.app.models.schemas import (
     FinishResponse,
 )
 
-from backend.app.services.ai_engine import AIEngine
-from backend.app.services.evaluator import Evaluator
+from app.services.ai_engine import AIEngine
+from app.services.evaluator import Evaluator
 
 
 router = APIRouter(
