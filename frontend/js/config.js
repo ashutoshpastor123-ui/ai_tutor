@@ -8,7 +8,7 @@
 // ==============================================================
 
 window.APP_CONFIG = {
-    API_BASE_URL: "http://127.0.0.1:8000",
+    API_BASE_URL: "https://ai-tutor-sewc.onrender.com",
 
     // Interview UX
     // Auto-finish after this many questions (set to 0 to disable auto-finish).
